@@ -7,7 +7,7 @@
 [![codecov](https://codecov.io/gh/tanhauhau/prev-day/branch/master/graph/badge.svg)](https://codecov.io/gh/tanhauhau/prev-day)-->
 
 
-> Get the previous day of the week, eg: previous Thursday
+> Get the previous occurance of a day of the week, eg: last Thursday
 
 ## Installation
 
@@ -19,7 +19,7 @@ npm install --save prev-day
 
 ```javascript
 var prevDay = require('prev-day');
-// get prev Monday
+// get previous Monday
 prevDay(new Date(), 1); // returns { date: [Date] , daySince: 4 }
                                             ^ date object    ^ day since prev Monday
 

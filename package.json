@@ -1,7 +1,7 @@
 {
   "name": "prev-day",
-  "version": "1.0.0",
-  "description": "Get the previous day of the week, eg: previous Thursday",
+  "version": "1.0.1",
+  "description": "Get the previous occurance of a day of the week, eg: last Thursday",
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover --include-all-sources jasmine-node spec && codecov"
