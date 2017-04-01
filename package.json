@@ -1,14 +1,14 @@
 {
-  "name": "next-day",
-  "version": "1.1.0",
-  "description": "Get the coming day of the week, eg: coming Thursday",
+  "name": "prev-day",
+  "version": "1.0.0",
+  "description": "Get the previous day of the week, eg: previous Thursday",
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover --include-all-sources jasmine-node spec && codecov"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tanhauhau/next-day.git"
+    "url": "git+https://github.com/cedmax/prev-day.git"
   },
   "keywords": [
     "day",
@@ -17,12 +17,12 @@
     "date",
     "util"
   ],
-  "author": "Tan Li Hau",
+  "author": "cedmax",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tanhauhau/next-day/issues"
+    "url": "https://github.com/cedmax/prev-day/issues"
   },
-  "homepage": "https://github.com/tanhauhau/next-day#readme",
+  "homepage": "https://github.com/cedmax/prev-day#readme",
   "devDependencies": {
     "jasmine": "^2.4.1",
     "jasmine-node": "^1.14.5",

@@ -1,72 +1,72 @@
 describe("Works fine", function() {
 
-    var nextDay = require('../index.js');
+    var prevDay = require('../index.js');
 
     //April 21, 2016, Thursday
     var today = new Date(2016, 3, 21);
     it("Monday", function() {
-        var nextMonday = nextDay(today, 1);
-        expect(nextMonday.date).toBeDefined();
-        expect(nextMonday.date).toEqual(new Date(2016,3,25));
-        expect(nextMonday.dayLeft).toBeDefined();
-        expect(nextMonday.dayLeft).toEqual(4);
+        var prevMonday = prevDay(today, 1);
+        expect(prevMonday.date).toBeDefined();
+        expect(prevMonday.date).toEqual(new Date(2016,3,18));
+        expect(prevMonday.daySince).toBeDefined();
+        expect(prevMonday.daySince).toEqual(3);
     });
     it("Tueday", function(){
-        var nextTueday = nextDay(today, 2);
-        expect(nextTueday.date).toBeDefined();
-        expect(nextTueday.date).toEqual(new Date(2016,3,26));
-        expect(nextTueday.dayLeft).toBeDefined();
-        expect(nextTueday.dayLeft).toEqual(5);
+        var prevTueday = prevDay(today, 2);
+        expect(prevTueday.date).toBeDefined();
+        expect(prevTueday.date).toEqual(new Date(2016,3,19));
+        expect(prevTueday.daySince).toBeDefined();
+        expect(prevTueday.daySince).toEqual(2);
     });
     it("Wednesday", function(){
-        var nextWednesday = nextDay(today, 3);
-        expect(nextWednesday.date).toBeDefined();
-        expect(nextWednesday.date).toEqual(new Date(2016,3,27));
-        expect(nextWednesday.dayLeft).toBeDefined();
-        expect(nextWednesday.dayLeft).toEqual(6);
+        var prevWednesday = prevDay(today, 3);
+        expect(prevWednesday.date).toBeDefined();
+        expect(prevWednesday.date).toEqual(new Date(2016,3,20));
+        expect(prevWednesday.daySince).toBeDefined();
+        expect(prevWednesday.daySince).toEqual(1);
     });
     it("Thursday", function(){
-        var nextThursday = nextDay(today, 4);
-        expect(nextThursday.date).toBeDefined();
-        expect(nextThursday.date).toEqual(new Date(2016,3,28));
-        expect(nextThursday.dayLeft).toBeDefined();
-        expect(nextThursday.dayLeft).toEqual(7);
+        var prevThursday = prevDay(today, 4);
+        expect(prevThursday.date).toBeDefined();
+        expect(prevThursday.date).toEqual(new Date(2016,3,14));
+        expect(prevThursday.daySince).toBeDefined();
+        expect(prevThursday.daySince).toEqual(7);
     });
     it("Friday", function(){
-        var nextFriday = nextDay(today, 5);
-        expect(nextFriday.date).toBeDefined();
-        expect(nextFriday.date).toEqual(new Date(2016,3,22));
-        expect(nextFriday.dayLeft).toBeDefined();
-        expect(nextFriday.dayLeft).toEqual(1);
+        var prevFriday = prevDay(today, 5);
+        expect(prevFriday.date).toBeDefined();
+        expect(prevFriday.date).toEqual(new Date(2016,3,15));
+        expect(prevFriday.daySince).toBeDefined();
+        expect(prevFriday.daySince).toEqual(6);
     });
     it("Saturday", function(){
-        var nextSaturday = nextDay(today, 6);
-        expect(nextSaturday.date).toBeDefined();
-        expect(nextSaturday.date).toEqual(new Date(2016,3,23));
-        expect(nextSaturday.dayLeft).toBeDefined();
-        expect(nextSaturday.dayLeft).toEqual(2);
+        var prevSaturday = prevDay(today, 6);
+        expect(prevSaturday.date).toBeDefined();
+        expect(prevSaturday.date).toEqual(new Date(2016,3,16));
+        expect(prevSaturday.daySince).toBeDefined();
+        expect(prevSaturday.daySince).toEqual(5);
     });
     it("Sunday", function(){
-        var nextSunday = nextDay(today, 7);
-        expect(nextSunday.date).toBeDefined();
-        expect(nextSunday.date).toEqual(new Date(2016,3,24));
-        expect(nextSunday.dayLeft).toBeDefined();
-        expect(nextSunday.dayLeft).toEqual(3);
-        expect(nextSunday).toEqual(nextDay(today, 0));
+        var prevSunday = prevDay(today, 7);
+        expect(prevSunday.date).toBeDefined();
+        expect(prevSunday.date).toEqual(new Date(2016,3,17));
+        expect(prevSunday.daySince).toBeDefined();
+        expect(prevSunday.daySince).toEqual(4);
+        expect(prevSunday).toEqual(prevDay(today, 0));
     });
 
     it("Constant", function(){
-        expect(nextDay.Monday).toEqual(1);
-        expect(nextDay.Tueday).toEqual(2);
-        expect(nextDay.Wednesday).toEqual(3);
-        expect(nextDay.Thursday).toEqual(4);
-        expect(nextDay.Friday).toEqual(5);
-        expect(nextDay.Saturday).toEqual(6);
-        expect(nextDay.Sunday).toEqual(7);
+        expect(prevDay.Monday).toEqual(1);
+        expect(prevDay.Tueday).toEqual(2);
+        expect(prevDay.Wednesday).toEqual(3);
+        expect(prevDay.Thursday).toEqual(4);
+        expect(prevDay.Friday).toEqual(5);
+        expect(prevDay.Saturday).toEqual(6);
+        expect(prevDay.Sunday).toEqual(7);
     });
 
     it("undefined", function(){
-        expect(nextDay(today, -1)).toBeUndefined();
-        expect(nextDay(today, 8)).toBeUndefined();
+        expect(prevDay(today, -1)).toBeUndefined();
+        expect(prevDay(today, 8)).toBeUndefined();
     });
 });
